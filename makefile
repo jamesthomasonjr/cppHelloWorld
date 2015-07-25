@@ -29,7 +29,7 @@ help:
 	@echo "";
 	$(call violet);
 	@echo "To build the application, run 'make build'";
-	@echo "To run the build binary, run 'make run'";
+	@echo "To run the built binary, run 'make run'";
 	@echo "To both build the binary and run it, run 'make all'";
 	$(call reset);
 
