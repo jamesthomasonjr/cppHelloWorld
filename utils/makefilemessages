@@ -1,0 +1,69 @@
+# Helper commands for pretty messages in the makefile
+
+define red
+	@tput setaf 1
+endef
+
+define green
+	@tput setaf 2
+endef
+
+define yellow
+	@tput setaf 3
+endef
+
+define blue
+	@tput setaf 4
+endef
+
+define violet
+	@tput setaf 5
+endef
+
+define cyan
+	@tput setaf 6
+endef
+
+define white
+	@tput setaf 7
+endef
+
+define bold
+	@tput bold
+endef
+
+define underline
+	@tput sgr 0 1
+endef
+
+define reset
+      @tput sgr0
+endef
+
+define errormsg
+	$(call bold)
+	$(call red)
+	@echo $1
+	$(call reset)
+endef
+
+define warningmsg
+	$(call bold)
+	$(call yellow)
+	@echo $1
+	$(call reset)
+endef
+
+define infomsg
+	$(call bold)
+	$(call blue)
+	@echo $1
+	$(call reset)
+endef
+
+define debugmsg
+	$(call bold)
+	$(call green)
+	@echo $1
+	$(call reset)
+endef
