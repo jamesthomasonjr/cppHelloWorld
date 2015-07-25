@@ -1,7 +1,7 @@
 // Greeter.cpp
 
-#include <iostream>
 #include "Greeter.hpp"
+#include <iostream>
 
 using std::string;
 using std::cout;

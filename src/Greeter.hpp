@@ -1,8 +1,8 @@
 // Greeter.hpp
 
 // Include Guard
-#ifndef __JT_HELLOWORLD_GREETER_H_INCLUDED__
-#define __JT_HELLOWORLD_GREETER_H_INCLUDED__
+#ifndef JT_HELLOWORLD_GREETER_H_INCLUDED
+#define JT_HELLOWORLD_GREETER_H_INCLUDED
 
 #include <string>
 
@@ -31,7 +31,10 @@ namespace JT
                 /// <returns>
                 /// A new Greeter instance
                 /// </returns>
-                Greeter(string target);
+                /// <remarks>
+                /// Marked explicit to prevent inadvertent use as a type conversion constructor.
+                /// </remarks>
+                explicit Greeter(string target);
 
                 /// <summary>
                 /// Changes the greeter's target.
@@ -59,4 +62,4 @@ namespace JT
     }
 }
 
-# endif // __JT_HELLOWORLD_GREETER_H_INCLUDED__
+# endif // JT_HELLOWORLD_GREETER_H_INCLUDED
