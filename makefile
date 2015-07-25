@@ -10,7 +10,11 @@ BINF = bin/
 
 default: help
 
-all: build run
+all: lint build run
+
+lint:
+	$(call infomsg, "Running code through flint++ linter!");
+	@flint++ src
 
 build:
 	$(call infomsg, "Building application.cpp!");
@@ -28,9 +32,10 @@ help:
 	@echo "(An attempt at fancy task runner stuff with make!)";
 	@echo "";
 	$(call violet);
+	@echo "To lint the code, run 'make lint'";
 	@echo "To build the application, run 'make build'";
 	@echo "To run the built binary, run 'make run'";
-	@echo "To both build the binary and run it, run 'make all'";
+	@echo "To lint the code, build the binary, and run the result, run 'make all'";
 	$(call reset);
 
 flags:

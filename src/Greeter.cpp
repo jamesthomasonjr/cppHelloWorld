@@ -9,23 +9,25 @@ using std::endl;
 
 namespace JT
 {
-    namespace HelloWorld
+namespace HelloWorld
+{
+
+    Greeter::Greeter(string input)
     {
-        Greeter::Greeter(string input)
-        {
-            greeted = input;
-        }
-
-        Greeter Greeter::changeGreeted(string input)
-        {
-            greeted = input;
-            return *this;
-        }
-
-        Greeter Greeter::greet()
-        {
-            cout << "Hello, " << greeted << "!" << endl;
-            return *this;
-        }
+        greeted = input;
     }
-}
+
+    Greeter Greeter::changeGreeted(string input)
+    {
+        greeted = input;
+        return *this;
+    }
+
+    Greeter Greeter::greet()
+    {
+        cout << "Hello, " << greeted << "!" << endl;
+        return *this;
+    }
+
+} // namespace HelloWorld
+} // namespace JT
